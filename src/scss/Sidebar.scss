@@ -1,0 +1,138 @@
+@import './resets';
+@import './variables';
+
+
+.sidebar{
+    @include flex(column, flex-start);
+    flex: 0.35;
+
+    @include responsive($mobile){
+        height: 20vh;
+    }
+    
+    
+}
+
+.sidebar__header{
+    @include flex(row, space-between);
+    border: $border;
+    padding: 20px;
+    @include responsive($mobile){
+       padding: 5px 5px 5px 10px;
+    }
+    
+}
+.sidebar__rightside{
+    @include flex(row, space-between);
+    align-items: center;
+    min-width: 10vw;
+
+    @include responsive($mobile){
+        display: none;
+        
+      }
+}
+
+.sidebar__rightsideMobile{
+    display: none;
+
+    @include responsive($mobile){
+        display: inline;
+        
+      }
+}
+
+.sidebar__searchbar{
+    display:flex;
+    border-radius: 20px;
+    background: $primary-white;
+    margin:8px;
+    padding:8px;
+
+    input{
+        border: none;
+        background: none;
+        margin-left: 10px;;
+        
+        }
+    @include responsive($mobile){
+        display: none;
+    }
+
+}
+.sidebar__searchbar, .MuiSVgIcon-root {
+    color: $secondary-color;
+    padding: 10px;
+    }
+
+
+
+.sidebar__Chats{
+    background-color: $primary-white;
+    overflow-y: scroll;
+    flex:1;
+
+    @include responsive($mobile){
+        display: none;
+    }
+}
+
+.sideabar__headerUserName{
+    display:flex;
+    align-items: center;
+    
+
+    p{
+        margin-left: 15px;
+        font-size: size(xlarge);
+
+        @include responsive($mobile){
+            font-size: size(big);
+        }
+    }
+
+    @include responsive($mobile){
+        .MuiAvatar-root{
+            height: 25px;
+            width: 25px;
+        }
+    }
+    
+}
+
+.sidebar__ChatsSelect{
+    display: none;
+
+    @include responsive($mobile){
+    position: relative;
+    display: flex;
+
+    Button{
+        flex:1;
+        font-size: size(medium) !important;
+        background-color: $primary-color !important;
+        color: $primary-white !important;
+        border-radius: 18px;
+        text-transform: inherit !important;
+    }
+    
+    }
+}
+
+
+.sidebar__Chats__Mobile{
+    display: none;
+    @include responsive($mobile){
+        display: inline;
+        position: absolute;
+        top: 6vh;
+        left: 25vw;
+        z-index: 3;
+        background-color: white;
+        border-radius: 18px;
+        box-shadow: 0 1px 3px rgba(0,0,0, 0.12),;
+    }
+    
+
+
+}

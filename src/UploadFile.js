@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import './UploadFile.css';
+import './scss/UploadFile.scss';
 import firebase from 'firebase';
 import db, { dataStorage } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';

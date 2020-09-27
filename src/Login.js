@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import './Login.css';
+import './scss/Login.scss';
 import { auth, provider } from './firebase';
 import signIn from './actions/signingIn'
 import { Button } from '@material-ui/core';

@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core'
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import setInput from './actions/settingInput';
-import './EmojiArray.css';
+import './scss/EmojiArray.scss';
 
 
 

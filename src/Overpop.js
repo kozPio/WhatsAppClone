@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid',
         padding: theme.spacing(1),
         backgroundColor: theme.palette.background.paper,
+        margin: "0 0 5px 20px",
     },
 }));
 

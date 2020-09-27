@@ -1,0 +1,47 @@
+@import './resets';
+@import './variables';
+
+
+
+.loginIn{
+    background-color: $fifth-white;
+    height: 100vh;
+    width:100vw;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.loginIn__container {
+    padding:100px;
+    text-align: center;
+    background-color: $primary-white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.12),;
+
+    Button{
+        margin-top: 20px;
+        text-transform: inherit !important;
+        border-radius: 16px;
+        cursor: pointer;
+        background-color: $primary-color !important;
+        color: $primary-white;
+    }
+
+
+    img{
+        object-fit: contain;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.loginIn__buuttons{
+    @include flex(column, flex-start);
+    margin-top:20px;
+}
+
+
+

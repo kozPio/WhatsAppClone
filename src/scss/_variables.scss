@@ -1,0 +1,52 @@
+
+$primary-color: #0a8d48 ;
+$secondary-color: gray;
+$third-color: #92b0b3;
+$primary-white: white;
+$seconary-white: #dadbd3;
+$third-white:  #ededed;
+$fourth-white: #dcf8c6;
+$fifth-white: #f8f8f8;
+
+
+$font-sizes: (
+    "xx-small": xx-small,
+    "small": 12px,
+    "medium": 14px,
+    "big": 16px,
+    "large": 18px,
+    "xlarge": 20px
+
+);
+
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 800
+);
+
+$border: 1px solid lightgray;
+
+$mobile: 760px;
+
+@mixin flex($direction, $justify-content) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+}
+
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
+
+@function size($font-size-name){
+    @return map-get($font-sizes, $font-size-name);
+}
+
+@mixin responsive ($size) {
+    @media (max-width: $size){
+        @content;
+    }
+}

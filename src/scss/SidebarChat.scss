@@ -1,0 +1,75 @@
+@import './resets';
+@import './variables';
+
+
+.sidebarChat{
+    display: flex;
+    align-items: flex-start;
+    padding:20px;
+    cursor: pointer;
+    border-bottom: $border;
+
+    &:hover{
+        background-color: #ebebeb;
+    }
+    @include responsive($mobile){
+        padding: 15px;
+        border-radius: 18px;
+        
+
+        h2 {
+            margin-left: 30%;
+            font-size: size(medium);
+        }
+    }
+}
+
+.sidebarChat__messages{
+    margin-left: 15px;
+
+    p{
+        margin-bottom:10px;
+        font-size: size(big);
+
+        @include responsive($mobile){
+            font-size: size(small);
+        }
+    }
+
+    @include responsive($mobile){
+        margin-left: 10px;
+    }
+}
+
+
+a{
+    text-decoration:none;
+    color:black;
+}
+.sidebar__chatname{
+    font-size: size(xlarge);
+    font-weight: weight(bold);
+}
+
+.sidebarChat__lastPhoto{
+    display: flex;
+    @include responsive($mobile){
+        font-size: size(small);
+
+        .MuiSvgIcon-root{
+            font-size: size(big);
+        }
+    }
+}
+
+.sidebarChat__fileInfo{
+    display: flex;
+    align-items: center;
+    @include responsive($mobile){
+        font-size: size(small);
+
+        .MuiSvgIcon-root{
+            font-size: size(big);
+        }
+    }
+}

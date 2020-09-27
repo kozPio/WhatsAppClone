@@ -1,0 +1,92 @@
+@import './resets';
+@import './variables';
+
+
+.container{
+    position: absolute;
+    z-index: 10;
+    top: 40vh;
+    left: 40vw;
+    background-color: lightgray;
+    @include flex(column, flex-start);
+
+    @include responsive ($mobile){
+        top: 35vh;
+        left: 20vw;
+        width: 60vw;
+    }
+    
+}
+
+.files{ 
+    position:relative;
+
+    input {
+        outline: 2px dashed $third-color;
+        outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear; 
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin-right: 0px;
+        width: 100% !important;
+
+        &:focus{     outline: 2px dashed $third-color;  outline-offset: -10px;
+            -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+            transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid $third-color;
+         }
+    }
+
+    &:after {  pointer-events: none;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 40px;
+        right: 0;
+        height: 56px;
+        content: "";
+        background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+        display: block;
+        margin: 0 auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        position: absolute;
+        bottom: 10px;
+        left: 0;  pointer-events: none;
+        width: 100%;
+        right: 0px;
+        height: 57px;
+        content: " or drag it here. ";
+        display: block;
+        margin: 0 auto;
+        color: #2ea591;
+        font-weight: weight(medium);
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+}
+
+.color input{ background-color:#f1f1f1;}
+
+
+
+.form-group{
+    @include flex(row, center);
+    
+   }
+
+
+.upload__closeWindow{
+       margin-left: auto;
+   }
+
+
+.upload__sendButton{
+ flex:1;
+ background-color: $primary-color ;
+ cursor: pointer;
+   }

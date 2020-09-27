@@ -1,0 +1,221 @@
+@import './resets';
+@import './variables';
+
+.chat{
+    @include flex(column, flex-start);
+    flex: 0.65;
+    
+    @include responsive($mobile){
+        height: 75vh;
+    }
+}
+
+.chat__header{
+    @include flex(row, space-between);
+    padding:10px;
+    border-bottom: $border;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+.chat__headerinfo{
+    @include flex(column, flex-start);
+    flex:1;
+    margin-left: 20px;
+
+    @include responsive ($mobile){
+        h3{
+            font-size: size(medium);
+        }
+
+        p {
+            font-size: size(small);
+        }
+    }
+}
+
+.chat__headerright{   
+    @include flex(row, space-between);
+    min-width: 100px;
+
+    @include responsive($mobile){
+        display: none;
+        
+    }
+    
+}
+
+
+
+.chat__body{
+ padding: 10px;
+ background-image: url("https://i.pinimg.com/originals/79/5c/ab/795cabc4647f73b365e2e6eabd0f34dc.png");
+ background-size: contain;
+ flex: 1;
+ overflow-y: scroll;
+ flex-direction: column;
+}
+
+.chat__message{
+    border-radius:10px;
+    background-color: $primary-white;
+    position: relative;
+    width: fit-content;
+    font-size: size(big);
+    padding: 5px;
+    margin-bottom: 30px;
+    outline-width: 0;
+    
+
+    @include responsive ($mobile){
+        font-size:14px;
+        
+    }
+}
+
+.chat__reciver{
+    margin-left:auto;
+    background-color: $fourth-white;
+}
+
+.chat__name{
+    position: absolute;
+    font-size: xx-small;
+    margin-top: -15px;
+    font-weight: weight(bold);
+
+   
+}
+
+.chat__timestamp{
+    margin-left: 10px;
+    font-size: size(xx-small);
+}
+
+.chat__footer{
+    @include flex(row, space-between);
+    align-items: center;
+
+    form{
+        display:flex;
+        flex:1;
+        
+        input{
+            flex:1;
+            border:none;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+        }
+
+        button{
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+.chat__footer .MuiSvgIcon-root{
+    color: $secondary-color;
+}
+
+
+.chat__headerright .MuiButton-root{
+ height: 70px;
+ width: 70px;
+
+}
+
+.chat__headerright .MuiButton-root:hover{
+    border-radius: 50%;
+    }
+
+.chat__headerright .MuiButton-root .MuiSvgIcon-root{
+ margin-left: 10px; 
+}
+
+
+.chat__messageImage{
+    max-height: 300px;
+    max-width: 400px;
+    @include flex(column, flex-start);
+
+    @include responsive ($mobile){
+        max-height: 200px;
+        max-width: 300px;
+        
+    }
+}
+
+
+.chat__file{
+    display: flex;
+    @include responsive ($mobile){
+        .MuiSvgIcon-root{
+            font-size: size(big);
+        }
+        
+    }
+    
+}
+
+
+.chat__fileName{
+    text-transform: uppercase;
+    @include responsive ($mobile){
+        font-size:12px;
+        
+    }
+    
+}
+
+.chat__fileName:hover{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#chat__logoutbutton:hover {
+    color: red !important;
+}
+
+#chat__logoutbutton:hover  {
+    .MuiSvgIcon-root{
+        color: red !important;
+    }
+    
+}
+
+#chat__logoutbutton{
+    color: green !important;
+}
+
+#chat__logoutbutton {
+    padding:10px;
+    .MuiSvgIcon-root{
+        color: green !important;
+        margin-left: 5px;
+        
+    }
+    
+}
+
+.chat__footer__attachFile{
+    display: none;
+
+    @include responsive ($mobile){
+        display: inline;
+    }
+}
+
+.chat__footer__micIcon{
+    display: inline;
+
+    @include responsive ($mobile){
+        display: none;
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './scss/App.scss';
 import Chat from './Chat';
 import Sidebar from './Sidebar';
 import Login from './Login';
